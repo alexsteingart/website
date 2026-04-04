@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alex Steingart</title>
   <meta name="robots" content="noindex, nofollow" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -24,7 +24,7 @@
       align-items: center;
       justify-content: center;
       padding: 2.5rem 1.5rem;
-      font-family: Lato, sans-serif;
+      font-family: Roboto, sans-serif;
       font-weight: 300;
     }
     .card {
@@ -41,22 +41,21 @@
       align-items: center;
     }
     .name {
-      font-family: "EB Garamond", Georgia, serif;
       font-size: clamp(2.2rem, 7vw, 3rem);
-      letter-spacing: 0.02em;
       color: var(--olive-dark);
       text-align: center;
       line-height: 1.1;
+      font-weight: 400;
     }
     .divider { width: 28px; height: 1px; background: var(--olive-mid); opacity: 0.35; margin: 1.6rem 0; }
     .specialties { display: flex; gap: 0.9rem; align-items: center; flex-wrap: wrap; justify-content: center; }
-    .spec { font-size: 0.75rem; letter-spacing: 0.06em; color: var(--olive-mute); }
+    .spec { font-size: 0.75rem; letter-spacing: 0.02em; color: var(--olive-mute); }
     .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--olive-mute); opacity: 0.5; flex-shrink: 0; }
     .divider-links { width: 28px; height: 1px; background: var(--olive-mid); opacity: 0.25; margin: 1.6rem 0; }
     .links { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
     .link {
       font-size: 0.80rem;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.04em;
       color: var(--olive-dark);
       text-decoration: none;
       position: relative;
