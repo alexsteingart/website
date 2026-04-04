@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Steingart</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:      #ECEADE;
+      --olive-dark: #2C2C1E;
+      --olive-mid:  #4E4E38;
+      --olive-mute: #7D7D5B;
+      --warm-gray:  #8A837C;
+    }
+    body {
+      background-color: var(--olive-dark);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1.5rem;
+      font-family: Lato, sans-serif;
+      font-weight: 300;
+    }
+    .card {
+      background: var(--cream);
+      max-width: 480px;
+      width: 100%;
+      overflow: hidden;
+      animation: rise 0.9s ease both;
+    }
+    .content {
+      padding: 2.8rem 2.8rem 2.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .name {
+      font-family: "EB Garamond", Georgia, serif;
+      font-size: clamp(2.2rem, 7vw, 3rem);
+      letter-spacing: 0.02em;
+      color: var(--olive-dark);
+      text-align: center;
+      line-height: 1.1;
+    }
+    .divider { width: 28px; height: 1px; background: var(--olive-mid); opacity: 0.35; margin: 1.6rem 0; }
+    .specialties { display: flex; gap: 0.9rem; align-items: center; flex-wrap: wrap; justify-content: center; }
+    .spec { font-size: 0.75rem; letter-spacing: 0.06em; color: var(--olive-mute); }
+    .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--olive-mute); opacity: 0.5; flex-shrink: 0; }
+    .divider-links { width: 28px; height: 1px; background: var(--olive-mid); opacity: 0.25; margin: 1.6rem 0; }
+    .links { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+    .link {
+      font-size: 0.80rem;
+      letter-spacing: 0.08em;
+      color: var(--olive-dark);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 0.25s;
+    }
+    .link::after { content: ""; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--olive-dark); transition: width 0.3s ease; }
+    .link:hover { color: var(--olive-mid); }
+    .link:hover::after { width: 100%; }
+    .link.email { color: var(--warm-gray); font-size: 0.76rem; }
+    .link.email::after { background: var(--warm-gray); }
+    .link.email:hover { color: var(--olive-mute); }
+
+    /* Photo at bottom, smaller */
+    .photo-rule { width: 100%; height: 3px; background: var(--olive-dark); margin-top: 2.2rem; }
+    .photo-wrap { width: 100%; line-height: 0; max-height: 240px; overflow: hidden; }
+    .photo-wrap img { width: 100%; height: 240px; object-fit: cover; object-position: center 30%; display: block; }
+
+    @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="content">
+      <h1 class="name">Alex Steingart</h1>
+      <div class="divider"></div>
+      <div class="specialties">
+        <span class="spec">Tech Entrepreneurship</span>
+        <span class="dot"></span>
+        <span class="spec">Hospitality Operations</span>
+      </div>
+      <div class="divider-links"></div>
+      <nav class="links">
+        <a class="link" href="https://www.linkedin.com/in/alexsteingart" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="link email" href="mailto:alex@steing.art">alex@steing.art</a>
+      </nav>
+    </div>
+    <div class="photo-rule"></div>
+    <div class="photo-wrap">
+      <img src="photo.jpg" alt="Alex Steingart at a winery" />
+    </div>
+  </div>
+</body>
+</html>
